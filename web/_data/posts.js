@@ -19,6 +19,7 @@ async function getPosts () {
     _id,
     publishedAt,
     title,
+    mainImage,
     slug,
     body[]{
       ...,
@@ -39,6 +40,7 @@ async function getPosts () {
   const docs = await client.fetch(query).catch(err => console.error(err))
   const reducedDocs = overlayDrafts(hasToken, docs)
   const preparePosts = reducedDocs.map(generatePost)
+  
   return preparePosts
 }
 

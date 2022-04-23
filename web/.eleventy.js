@@ -1,6 +1,7 @@
 const { DateTime } = require("luxon");
 const util = require('util')
 const CleanCSS = require("clean-css");
+const urlFor = require('./utils/imageUrl');
 
 module.exports = function(eleventyConfig) {
 
@@ -43,6 +44,14 @@ module.exports = function(eleventyConfig) {
     const md = new markdownIt(options)
     return md.render(value)
   })
+
+  eleventyConfig.addShortcode('imageUrlFor', (image, width="400") => {
+    return urlFor(image)
+      .width(width)
+      .auto('format')
+  })
+
+
   return {
     templateFormats: [
       "md",
