@@ -1,0 +1,31 @@
+@import "./_breakpoints.scss";
+
+main {
+  display: grid;
+  grid-template-rows: 60px 1fr 30px;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+    min-height: 100vh;
+}
+.content{
+    grid-area: content;
+}
+.container {
+  max-width: $desktop;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  align-items: center;
+}
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax($minColWidth, 1fr));
+  grid-gap: 2rem;
+
+  & + .grid {
+    margin-top: $gridGap;
+  }
+}

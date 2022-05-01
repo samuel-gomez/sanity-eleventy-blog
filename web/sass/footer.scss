@@ -1,0 +1,11 @@
+@import './_colors.scss';
+@import './_breakpoints.scss';
+
+footer {   
+    grid-area: footer;
+    font-size: .8rem;
+    color: $color-grey;
+    background: black;
+    padding: .5rem;
+    text-align: center;   
+}

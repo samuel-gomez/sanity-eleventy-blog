@@ -1,0 +1,11 @@
+$mobile: 320px;
+$mobilew: 640px;
+$tablet: 768px;
+$tabletw: 1024px;
+$desktop: 1280px;
+$desktopw: 1440px;
+
+$breackpoints: ($mobile, $mobilew,$tablet, $tabletw, $desktop, $desktopw );
+
+$minColWidth: 15rem;
+$gridGap: 2rem;

@@ -1,7 +1,8 @@
 ---
-layout: layouts/author
-tags:
-  - myAuthors
+layout: layouts/author.njk
+tags: ['nav', 'myAuthor']
+navtitle: Auteurs
+date: 2022-02-01
 pagination:
   alias: author
   data: authors
@@ -11,3 +12,6 @@ permalink: authors/{{ author.name | slug }}/index.html
 ---
 
 
+<h1>Liste des auteurs</h1>
+
+<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>

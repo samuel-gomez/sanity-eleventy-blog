@@ -1,0 +1,11 @@
+<header >
+  <section class="container">
+    <img src="{%  imageUrlFor metadata.image, 150  %}" alt="{{metadata.image.alt}}" />
+    <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+    <nav>
+      {%- for nav in collections.nav -%}
+      <a class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}" href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a>
+      {%- endfor -%} 
+    </nav>
+  </section>
+</header>
