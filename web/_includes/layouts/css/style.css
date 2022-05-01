@@ -407,14 +407,40 @@ footer {
   text-align: center;
 }
 
+.postlist {
+  list-style: none;
+  padding: 0;
+}
+.postlist p {
+  line-height: 1rem;
+  font-size: 1.2rem;
+}
+.postlist-title {
+  margin-bottom: 0.2rem;
+}
+.postlist-date {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
 body {
   min-height: 100vh;
-  font-family: "DM Serif Display", Georgia, serif;
+  font-family: "Poppins", sans-serif;
   background: rgb(245, 245, 245);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Serif Display", Georgia, serif;
 }
 
 a {
   color: rgb(139, 192, 253);
+  font-weight: 300;
 }
 a:hover {
   text-decoration: none;

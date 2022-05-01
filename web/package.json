@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "npx eleventy",
-    "dev": "npm run watch:sass & npm run watch:eleventy",
+    "dev": "npm run sass && npm run watch",
+    "watch": "concurrently \"npm run watch:eleventy\" \"npm run watch:sass\"",
     "watch:eleventy": "npx eleventy --watch --serve",
+    "sass": "npx sass sass/style.scss:_includes/layouts/css/style.css",
     "watch:sass": "npx sass sass/style.scss:_includes/layouts/css/style.css --watch",
     "now-build": "npm run build",
     "debug": "DEBUG=* npx eleventy"
@@ -28,6 +30,7 @@
   },
   "dependencies": {
     "@sanity/image-url": "^1.0.1",
+    "concurrently": "^7.1.0",
     "sass": "^1.51.0"
   }
 }

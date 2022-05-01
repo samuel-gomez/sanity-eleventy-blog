@@ -1,20 +1,30 @@
-@import './colors.scss';
-@import './reset.scss';
-@import './layout.scss';
+@import "./colors.scss";
+@import "./reset.scss";
+@import "./layout.scss";
 
-@import './header.scss';
-@import './footer.scss';
+@import "./header.scss";
+@import "./footer.scss";
+
+@import "./postslist.scss";
 
 body {
   min-height: 100vh;
-  font-family: 'DM Serif Display', Georgia, serif;
+  font-family: "Poppins", sans-serif;
   background: $color-grey-light;
 }
-a {
-    color: $color-blue; 
-    &:hover{
-      text-decoration: none;
-    }   
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Serif Display", Georgia, serif;
 }
-
-
+a {
+  color: $color-blue;
+  font-weight: 300;
+  &:hover {
+    text-decoration: none;
+  }
+}
